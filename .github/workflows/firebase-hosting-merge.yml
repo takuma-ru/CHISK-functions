@@ -13,7 +13,7 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@main
       - name: cd
-        uses: cd functions
+        run: cd functions
       - name: Install Dependencies
         run: yarn install --immutable --immutable-cache --check-cache
       - name: Build
@@ -32,7 +32,7 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@main
       - name: cd
-        uses: cd functions
+        run: cd functions
       - name: Download Artifact
         uses: actions/download-artifact@main
         with:
