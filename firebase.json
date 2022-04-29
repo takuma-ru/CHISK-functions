@@ -1,6 +1,5 @@
 {
   "functions": {
-    "predeploy": [
-    ]
+    "runtime":"nodejs16"
   }
 }
