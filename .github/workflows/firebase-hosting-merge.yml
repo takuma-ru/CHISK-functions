@@ -16,9 +16,10 @@ jobs:
         run: cd functions && yarn install --immutable --immutable-cache --check-cache
       - name: Build
         run: cd functions && yarn build
+      - name: cd
+        run: cd functions
       - name: Archive Production Artifact
         uses: actions/upload-artifact@main
-        run: cd functions
         with:
           name: lib
           path: lib
