@@ -18,6 +18,7 @@ jobs:
         run: cd functions && yarn build
       - name: Archive Production Artifact
         uses: actions/upload-artifact@main
+        run: cd functions
         with:
           name: lib
           path: lib
@@ -33,6 +34,7 @@ jobs:
         run: cd functions
       - name: Download Artifact
         uses: actions/download-artifact@main
+        run: cd functions
         with:
           name: lib
           path: lib
