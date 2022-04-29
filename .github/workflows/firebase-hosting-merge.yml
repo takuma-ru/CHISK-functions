@@ -12,12 +12,10 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@main
-      - name: cd
-        run: cd functions
       - name: Install Dependencies
-        run: yarn install --immutable --immutable-cache --check-cache
+        run: cd functions && yarn install --immutable --immutable-cache --check-cache
       - name: Build
-        run: yarn build
+        run: cd functions && yarn build
       - name: Archive Production Artifact
         uses: actions/upload-artifact@main
         with:
